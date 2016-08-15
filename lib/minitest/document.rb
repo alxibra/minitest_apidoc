@@ -5,7 +5,7 @@ class Document
   end
   def print
     # TODO italic markdown
-    File.open("api_documentation.md", "wt") do |f|
+    File.open(MinitestApidoc.filename, "wt") do |f|
       @md = Markdown.new
       holders.each do |holder|
        f.puts md.header(holder.klass_desc)
